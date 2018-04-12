@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 import telegram
 import feedparser
-import pprint
 import argparse
 import datetime
 import time
@@ -56,5 +55,5 @@ while True:
         telegram.send_message(args.token, args.destination_id, post, args.localtz, args.sourcetz, args.msgformat, args.parsemode, args.timefmt)
         seen_posts.append(post.id)
   iteration_count = iteration_count + 1
-  v("Sleeping for " + args.time + " seconds", args)
+  v("Sleeping for " + str(args.time) + " seconds", args)
   time.sleep(int(args.time))
